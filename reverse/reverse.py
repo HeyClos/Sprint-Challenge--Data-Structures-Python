@@ -38,5 +38,16 @@ class LinkedList:
 
         return False
 
-    def reverse_list(self, node, prev):
-        pass
+    def reverse_list(self, node, prev=None):
+        # we want to reverse the existing list
+        # references, switch next to prev without
+        # losing references
+        # we might need a callstack that returns
+        # once self.next_node = None
+
+        self.prev = prev
+
+        node.next_node
+
+        if self.head is not None:
+            node.prev(self.head)

@@ -39,15 +39,12 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev=None):
-        # we want to reverse the existing list
-        # references, switch next to prev without
-        # losing references
-        # we might need a callstack that returns
-        # once self.next_node = None
+        current = self.head
+        while current:
+            # create a variable to hold the value of current node's next
+            next_node = current.next_node # 2
+            current.next_node = prev # head is now none
+            prev = current # none is now head
+            current = next_node # head is now 2
 
-        self.prev = prev
-
-        node.next_node
-
-        if self.head is not None:
-            node.prev(self.head)
+        self.head = prev #head is now current, which is head
